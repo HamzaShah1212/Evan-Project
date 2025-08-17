@@ -178,6 +178,34 @@
   color: #d4af37;
   font-weight: 600;
 }
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+  .footer-container {
+    align-items: center; /* centers all child elements */
+    gap: 20px; /* reduces gap between stacked elements */
+  }
+  
+  .footer-logo {
+    flex-direction: column; /* stacks logo and text vertically */
+    text-align: center; /* centers the text below logo */
+    gap: 8px;
+  }
+  
+  .footer-title {
+    text-align: center; /* centers the company name and tagline */
+  }
+  
+  .footer-nav {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center; /* centers nav items */
+  }
+  
+  .footer-social {
+    margin-top: 10px; /* adds some space above social icons */
+  }
+}
+
 
 /* Responsive */
 @media (max-width: 768px) {
