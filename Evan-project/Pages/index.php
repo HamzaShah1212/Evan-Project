@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Website</title>
     <link rel="stylesheet" href="../Assests/style.css">
-</head>
+<style>
+  
+</style>
+  </head>
 <body>
     <?php include '../includes/Top-menu.php'; ?>
 <?php include("arrays.php"); ?>
@@ -28,24 +31,23 @@
 
             <div class="clients-grid">
                 <div class="client-logo">
-                    <img src="../Assests/images/Hero.png" alt="Client 1">
+                    <img src="../Assests/images/pic 1.png" alt="Client 1">
                 </div>
                 <div class="client-logo">
-                    <img src="../Assests/images/sadfas (5).png" alt="Client 2">
+                    <img src="../Assests/images/pic 2.png" alt="Client 2">
                 </div>
                 <div class="client-logo">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png" alt="Google">
+                    <img src="../Assests/images/pic 3.jpg" alt="Google">
                 </div>
                 <div class="client-logo">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Nike_Logo.svg/2560px-Nike_Logo.svg.png" alt="Nike">
+                    <img src="../Assests/images/pic 4.png" alt="Nike">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <!-- Projects Section -->
-<section class="projects-section">
+    <section class="projects-section">
     <div class="container">
         <div class="section-header">
             <h2 class="highlight-heading">Our Projects</h2>
@@ -158,6 +160,7 @@
 </section>
 
 
+<?php include '../includes/Contact-us.php'; ?>
 
     <script src="../Assests/js/main.js"></script>
     <?php include '../includes/Footer.php'; ?>
@@ -219,3 +222,4 @@
     
 </body>
 </html>
+
