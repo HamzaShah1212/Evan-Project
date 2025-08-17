@@ -498,7 +498,8 @@ nav {
     font-size: 36px;
     font-weight: bold;
     line-height: 1.4;
-    color: #111;
+    color: #000000;
+    /* font-family: ; */
 }
 
 .highlight {
@@ -673,6 +674,7 @@ nav {
     grid-template-columns: 1fr 1fr;
     gap: 30px;
     margin-top: 50px;
+    align-items: start; /* important for stagger effect */
 }
 
 .project-card {
@@ -682,6 +684,15 @@ nav {
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     transition: transform 0.3s ease;
     position: relative;
+}
+
+/* Stagger effect */
+.project-card:nth-child(odd) {
+    margin-top: 40px;   /* left wali thodi niche */
+}
+
+.project-card:nth-child(even) {
+    margin-top: 0;      /* right wali thodi upar */
 }
 
 .project-card img {
@@ -699,7 +710,6 @@ nav {
     font-size: 14px;
     line-height: 1.6;
 }
-
 
 
 

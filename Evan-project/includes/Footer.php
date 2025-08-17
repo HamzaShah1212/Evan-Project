@@ -1,273 +1,190 @@
-<footer class="site-footer">
-    <div class="container">
-        <div class="footer-content">
-            <div class="footer-about">
-                <div class="footer-logo">
-                    <img src="/Assests/images/Logo.png" alt="EVAC Architects Logo" class="footer-logo-img">
-                    <h3>EVAC Architects</h3>
-                </div>
-                <p>Designing timeless, innovative, and sustainable architectural solutions that inspire and transform spaces.</p>
-                <div class="social-links">
-                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-            </div>
+<footer class="footer">
+  <div class="footer-container">
 
-            <div class="footer-links">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-services">
-                <h4>Our Services</h4>
-                <ul>
-                    <li><a href="#">Architectural Design</a></li>
-                    <li><a href="#">Interior Design</a></li>
-                    <li><a href="#">Urban Planning</a></li>
-                    <li><a href="#">Renovation</a></li>
-                    <li><a href="#">3D Visualization</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-contact">
-                <h4>Contact Us</h4>
-                <ul class="contact-info">
-                    <li><i class="fas fa-map-marker-alt"></i> 123 Design Street, Creative City, 10001</li>
-                    <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
-                    <li><i class="fas fa-envelope"></i> info@evacarchitects.com</li>
-                    <li><i class="fas fa-clock"></i> Mon - Fri: 9:00 AM - 6:00 PM</li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; <?php echo date('Y'); ?> EVAC Architects. All Rights Reserved.</p>
-            <div class="footer-legal">
-                <a href="#">Privacy Policy</a>
-                <span>|</span>
-                <a href="#">Terms of Service</a>
-            </div>
-        </div>
+    <!-- Logo and Company Name -->
+    <div class="footer-logo">
+      <img src="../Assests/images/logo 1.png" alt="EVAC Logo1" class="footer-img">
+      <div class="footer-title">
+        <h2>ECO VISTA</h2>
+        <p>ARCHITECTS AND CONSULTANTS</p>
+      </div>
     </div>
+
+    <!-- Navigation Links -->
+    <ul class="footer-nav">
+      <li><a href="/">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+
+    <!-- Social Links -->
+    <div class="footer-social">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+    
+  </div>
+
+  <!-- Copyright -->
+  <div class="footer-bottom">
+    <p>&copy; 2025 <span>ECO VISTA ARCHITECTS AND CONSULTANTS</span> All Rights Reserved, Inc.</p>
+  </div>
 </footer>
+<!-- FontAwesome CDN for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
-/* Footer Styles */
-.site-footer {
-    background-color: #1a1a1a;
-    color: #fff;
-    padding: 70px 0 0;
-    font-family: 'Poppins', sans-serif;
-}
-
-.footer-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
-    margin-bottom: 50px;
-}
-
-.footer-about {
-    padding-right: 20px;
-}
-
+/* Logo Section */
 .footer-logo {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
+  display: flex;
+  align-items: center;    /* vertical center align */
+  justify-content: center; /* center whole block horizontally */
+  gap: 12px;              /* space between logo and text */
 }
 
-.footer-logo-img {
-    height: 40px;
-    margin-right: 15px;
+.footer-logo .footer-img {
+  height: 55px;  /* adjust size */
+  width: auto;
 }
 
-.footer-logo h3 {
-    font-size: 24px;
-    font-weight: 700;
-    margin: 0;
-    color: #fff;
+.footer-title {
+  text-align: left; /* text ko left align rakhen logo ke side pe */
 }
 
-.footer-about p {
-    color: #b3b3b3;
-    line-height: 1.6;
-    margin-bottom: 25px;
+.footer-title h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: #d4af37; /* golden color */
+  letter-spacing: 1px;
 }
 
-.social-links {
-    display: flex;
-    gap: 15px;
+.footer-title p {
+  margin: 0;
+  font-size: 13px;
+  color: #555;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 
-.social-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 36px;
-    height: 36px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    color: #fff;
-    transition: all 0.3s ease;
+.footer {
+  background: #fff;
+  color: #000;
+  padding: 40px 0 0;
+  font-family: 'Poppins', sans-serif;
+  text-align: center; /* ensures text based elements center */
 }
 
-.social-link:hover {
-    background: #e5b700;
-    transform: translateY(-3px);
+/* Container ko column aur center align */
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* sab elements horizontally center */
+  gap: 25px;
 }
 
-.footer-links h4,
-.footer-services h4,
-.footer-contact h4 {
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 25px;
-    position: relative;
-    padding-bottom: 10px;
+/* Logo Section */
+.footer-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
 }
 
-.footer-links h4::after,
-.footer-services h4::after,
-.footer-contact h4::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 40px;
-    height: 2px;
-    background: #e5b700;
+.footer-logo .footer-img {
+  height: 55px;
+  width: auto;
 }
 
-.footer-links ul,
-.footer-services ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.footer-title {
+  text-align: left;
 }
 
-.footer-links li,
-.footer-services li {
-    margin-bottom: 12px;
+.footer-title h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: #d4af37;
+  letter-spacing: 1px;
 }
 
-.footer-links a,
-.footer-services a {
-    color: #b3b3b3;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    display: inline-block;
+.footer-title p {
+  margin: 0;
+  font-size: 13px;
+  color: #555;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 
-.footer-links a:hover,
-.footer-services a:hover {
-    color: #e5b700;
-    transform: translateX(5px);
+/* Navigation */
+.footer-nav {
+  display: flex;
+  justify-content: center;  /* center navigation row */
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
 }
 
-.contact-info {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.footer-nav a {
+  color: #000;
+  text-decoration: none;
+  font-size: 15px;
+  transition: 0.3s;
 }
 
-.contact-info li {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 15px;
-    color: #b3b3b3;
-    line-height: 1.5;
+.footer-nav a:hover {
+  color: #d4af37;
 }
 
-.contact-info i {
-    color: #e5b700;
-    margin-right: 15px;
-    margin-top: 4px;
-    min-width: 20px;
-    text-align: center;
+/* Social Icons */
+.footer-social {
+  display: flex;
+  justify-content: center; /* center icons row */
+  gap: 20px;
 }
 
+.footer-social a {
+  color: #000;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.footer-social a:hover {
+  color: #d4af37;
+}
+
+/* Bottom */
 .footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 25px 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+  margin-top: 30px;
+  background: #333;
+  padding: 15px 10px;
+  text-align: center; /* ensure copyright center */
 }
 
 .footer-bottom p {
-    margin: 0;
-    color: #b3b3b3;
-    font-size: 14px;
+  margin: 0;
+  color: #fff;
+  font-size: 14px;
 }
 
-.footer-legal {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+.footer-bottom span {
+  color: #d4af37;
+  font-weight: 600;
 }
 
-.footer-legal a {
-    color: #b3b3b3;
-    text-decoration: none;
-    font-size: 14px;
-    transition: color 0.3s ease;
-}
-
-.footer-legal a:hover {
-    color: #e5b700;
-}
-
-.footer-legal span {
-    color: #4d4d4d;
-}
-
-/* Responsive Styles */
+/* Responsive */
 @media (max-width: 768px) {
-    .footer-content {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    .footer-about {
-        padding-right: 0;
-    }
-
-    .footer-bottom {
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
-    }
-
-    .footer-legal {
-        margin-top: 10px;
-    }
+  .footer-nav {
+    flex-direction: column;
+    gap: 15px;
+  }
 }
 
-@media (max-width: 480px) {
-    .footer-links,
-    .footer-services,
-    .footer-contact {
-        text-align: center;
-    }
-
-    .footer-links h4::after,
-    .footer-services h4::after,
-    .footer-contact h4::after {
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .social-links {
-        justify-content: center;
-    }
-}
 </style>

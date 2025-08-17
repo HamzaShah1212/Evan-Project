@@ -50,7 +50,7 @@
     <section class="projects-section">
     <div class="container">
         <div class="section-header">
-            <h2 class="highlight-heading">Our Projects</h2>
+            <h2 >Our Projects</h2>
             <p>
                 At EVAC, we believe in transforming architectural visions into tangible realities that enrich
                 communities and inspire generations. Our portfolio showcases a diverse range of projects,
