@@ -10,7 +10,7 @@
 <nav>
     <div class="nav-container">
         <div class="logo-section">
-            <img src="../Assests/images/logo 1.png" alt="Logo">
+            <img src="Assests/images/logo 1.png" alt="Logo">
             <div class="logo-text">
                 <h1>ECO VISTA</h1>
                 <p>ARCHITECTS AND CONSULTANTS</p>
@@ -25,8 +25,8 @@
         </button>
 
         <div class="nav-links">
-            <a href="#" class="active">HOME</a>
-            <a href="#">PROJECTS</a>
+            <a href="/Evan-project/index.php" class="active">HOME</a>
+            <a href="/Evan-project/Project.php">PROJECTS</a>
             <a href="#">OUR TEAM</a>
         </div>
     </div>

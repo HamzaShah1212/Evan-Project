@@ -3,7 +3,7 @@
 
     <!-- Logo and Company Name -->
     <div class="footer-logo">
-      <img src="../Assests/images/logo 1.png" alt="EVAC Logo1" class="footer-img">
+      <img src="Assests/images/logo 1.png" alt="EVAC Logo1" class="footer-img">
       <div class="footer-title">
         <h2>ECO VISTA</h2>
         <p>ARCHITECTS AND CONSULTANTS</p>

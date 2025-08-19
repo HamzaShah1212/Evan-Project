@@ -1,5 +1,23 @@
 // Mobile Menu Toggle
 document.addEventListener('DOMContentLoaded', function() {
+    // Toast message for contact form (if present)
+    var contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            // Wait for PHP to process, then show toast if redirected back with success
+            setTimeout(function() {
+                var toast = document.getElementById('toast-message');
+                if (toast) {
+                    toast.style.display = 'block';
+                    toast.style.opacity = '1';
+                    setTimeout(function() {
+                        toast.style.opacity = '0';
+                        setTimeout(function() { toast.style.display = 'none'; }, 400);
+                    }, 2500);
+                }
+            }, 200);
+        });
+    }
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
     const navLinksItems = document.querySelectorAll('.nav-links a');
