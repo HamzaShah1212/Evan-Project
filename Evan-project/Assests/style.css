@@ -550,7 +550,8 @@ margin-bottom: 296px;
     gap: 25px;                       /* Space between children */
     text-align: center;              /* Center text */
     width: 100%;                     /* Full width */
-    border: 2px solid gray;          /* Gray border */
+    border: 2px solid gray; 
+    margin-top: 14px;         /* Gray border */
 }
 
 .testimonial-img {
