@@ -116,7 +116,7 @@ session_start();
 
       <!-- View All Button -->
       <div class="center-btn">
-        <button id="viewAllBtn" class="btn-yellow" style="background:#f7ce3b; color:black; padding:10px 20px; border:none; font-weight:bold; cursor:pointer;">
+        <button id="viewAllBtn" class="btn-yellow">
           View All
         </button>
       </div>
