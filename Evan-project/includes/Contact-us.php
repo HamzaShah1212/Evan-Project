@@ -67,13 +67,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['name'], $_POST['email'
       </div>
 
       <!-- Images Row -->
-      <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:20px;">
-          <img src="Assests/images/all3.jpg" width="200" height="120" style="object-fit:cover;">
-        <img src="Assests/images/foot3.jpg" width="200" height="120" style="object-fit:cover;">
-        <img src="Assests/images/foot1.png" width="200" height="120" style="object-fit:cover;">
-        <img src="Assests/images/foot4.jpg" width="200" height="120" style="object-fit:cover;">
-  
-      </div>
+      <div style="display: flex; justify-content: space-between; margin-top: 20px; gap: 10px;">
+  <img src="Assests/images/all3.jpg" style="width: 24%; height: 120px; object-fit: cover;">
+  <img src="Assests/images/foot3.jpg" style="width: 24%; height: 120px; object-fit: cover;">
+  <img src="Assests/images/foot1.png" style="width: 24%; height: 120px; object-fit: cover;">
+  <img src="Assests/images/foot4.jpg" style="width: 24%; height: 120px; object-fit: cover;">
+</div>
+
     </div>
 
     <!-- Right Form -->
@@ -88,7 +88,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['name'], $_POST['email'
         
         <textarea name="message" placeholder="Your Message*" rows="5" required style="padding:10px; border:1px solid #ccc;"></textarea>
         
-        <button type="submit" style="background:#f8c100; border:none; padding:12px; font-weight:bold; cursor:pointer;">
+        <button type="submit" style="background:#f8c100; border:none; padding:12px; font-weight:bold; cursor:pointer; max-width: 40%;">
           Submit Message
         </button>
       </form>

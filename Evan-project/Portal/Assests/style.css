@@ -1,0 +1,105 @@
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: url("../Assests/image.jpg") no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* -------- LOGIN BOX -------- */
+        .login-container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px 30px;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+            width: 370px;
+            text-align: center;
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+        }
+
+        /* -------- LOGO + TITLE INSIDE BOX -------- */
+        .login-container .logo-section {
+            margin-bottom: 20px;
+        }
+        .login-container .logo-section img {
+            width: 90px;
+            height: auto;
+        }
+        .login-container .logo-section h1 {
+            margin: 10px 0 5px;
+            font-size: 26px;
+            color: #222;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .login-container .logo-section p {
+            font-size: 14px;
+            color: #555;
+            font-weight: 500;
+        }
+
+        .login-container h2 {
+            margin-bottom: 20px;
+            font-size: 20px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .login-container input {
+            width: 100%;
+            padding: 12px 14px;
+            margin: 12px 0;
+            border: none;
+            border-radius: 10px;
+            outline: none;
+            font-size: 14px;
+            background: #fff;
+            color: #333;
+        }
+        .login-container input:focus {
+            border: 2px solid #4A90E2;
+            box-shadow: 0 0 6px rgba(74,144,226,0.5);
+        }
+
+        .login-container button {
+            background: linear-gradient(135deg, #4A90E2, #357ABD);
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        .login-container button:hover {
+            background: linear-gradient(135deg, #357ABD, #2c5ea8);
+            transform: translateY(-2px);
+        }
+
+        .error {
+            color: #ff4d4d;
+            margin-bottom: 15px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        @media (max-width: 400px) {
+            .login-container {
+                width: 90%;
+                padding: 30px 20px;
+            }
+            .login-container .logo-section img {
+                width: 70px;
+            }
+        }

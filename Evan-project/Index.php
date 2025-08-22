@@ -16,6 +16,21 @@ session_start();
   <!-- CSS -->
   <link rel="stylesheet" href="Assests/style.css">
 </head>
+<style>
+  .fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1.2s ease-out forwards;
+}
+
+/* Keyframes */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
 <body>
   
   <!-- Top Menu -->
@@ -26,7 +41,7 @@ session_start();
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
-      <div class="hero-text">
+      <div class="hero-text fade-up">
         <h1>
           Designing timeless, innovative, and <br>
           sustainable architectural Sol<span class="highlight">utions</span>
@@ -40,7 +55,7 @@ session_start();
     <div class="container">
       <div class="section-header">
         <h2>Our Clients</h2>
-        <p>We've had the pleasure of working with these amazing companies and organizations</p>
+        <p style="margin-top: 7px;   font-family: 'Poppins', sans-serif;">We collaborate with a broad spectrum of clients, including private homeowners, developers, <br> corporate entities, and public institutions. Our client-focused approach ensures personalized <br> attention and tailored solutions for every project.</p>
       </div>
 
       <div class="clients-grid">
@@ -75,10 +90,10 @@ session_start();
       <!-- Filter Buttons -->
       <div class="projects-filter">
         <button class="filter-btn active" data-filter="All">All</button>
-        <button class="filter-btn" data-filter="Offices">Offices</button>
+        <button class="filter-btn" data-filter="UPLIFT ROAD">UPLIFT ROAD  </button>
         <button class="filter-btn" data-filter="Residential Building">Residential Building</button>
-        <button class="filter-btn" data-filter="Luxury House">Luxury House</button>
-        <button class="filter-btn" data-filter="Hotels">Hotels</button>
+        <!-- <button class="filter-btn" data-filter="Luxury House">Luxury House</button> -->
+   
       </div>
 
       <!-- Projects Grid -->
@@ -86,15 +101,20 @@ session_start();
         <?php 
         $limit = 6; 
         $count = 0;
-        foreach ($projects as $project): 
+        foreach ($projects as $index => $project): 
           $count++;
           $hiddenClass = $count > $limit ? 'hidden-project' : '';
         ?>
-        <div class="project-wrapper <?= $hiddenClass; ?>">
+        <div class="project-wrapper <?= $hiddenClass; ?>" data-index="<?= $index; ?>">
           <!-- Card with Image -->
           <div class="project-card <?= $project['size'] ?? 'small-card'; ?>" data-category="<?= $project['category']; ?>">
             <div class="image-wrapper">
-              <img src="<?= $project['image']; ?>" alt="<?= $project['title']; ?>">
+              <!-- First image is visible, others are hidden initially -->
+              <?php foreach ($project['images'] as $imgIndex => $image): ?>
+                <img src="<?= $image; ?>" alt="<?= $project['title']; ?>" 
+                     class="project-image <?= $imgIndex === 0 ? 'active' : ''; ?>" 
+                     data-index="<?= $imgIndex; ?>">
+              <?php endforeach; ?>
               <div class="overlay-title">
                 <?= $project['title']; ?>
               </div>
@@ -116,9 +136,11 @@ session_start();
 
       <!-- View All Button -->
       <div class="center-btn">
-        <button id="viewAllBtn" class="btn-yellow" style="background:#f7ce3b; color:black; padding:10px 20px; border:none; font-weight:bold; cursor:pointer;">
-          View All
-        </button>
+      <button id="viewAllBtn" class="btn-yellow" 
+        style="background:#f7ce3b; color:black; padding:10px 20px; border:none; font-weight:bold; cursor:pointer;">
+    <i class="fas fa-check me-2"></i> View All
+</button>
+
       </div>
     </div>
   </section>
@@ -136,7 +158,7 @@ session_start();
         <div class="testimonial-content">
           <img src="Assests/images/testopic.jpg" class="testimonial-img" alt="Client 1">
           <div class="testimonial-text">
-            <span class="quote">“</span>
+            <span class="quote">"</span>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             <h4>Ali Khan</h4>
             <span>CEO, Company</span>
@@ -149,7 +171,7 @@ session_start();
         <div class="testimonial-content">
           <img src="Assests/images/pic 2.png" class="testimonial-img" alt="Client 2">
           <div class="testimonial-text">
-            <span class="quote">“</span>
+            <span class="quote">"</span>
             <p>Vestibulum ante ipsum primis in faucibus orci luctus.</p>
             <h4>Sara Ahmed</h4>
             <span>Designer</span>
@@ -160,9 +182,9 @@ session_start();
       <!-- Testimonial 3 -->
       <div class="testimonial">
         <div class="testimonial-content">
-          <img src="Assess/images/foot1.png" class="testimonial-img" alt="Client 3">
+          <img src="Assests/images/foot1.png" class="testimonial-img" alt="Client 3">
           <div class="testimonial-text">
-            <span class="quote">“</span>
+            <span class="quote">"</span>
             <p>Donec sit amet eros. Lorem ipsum dolor sit amet.</p>
             <h4>Usman Khan</h4>
             <span>Developer</span>
@@ -191,8 +213,38 @@ session_start();
   <?php endif; ?>
 
   <!-- Contact + Footer -->
-  <?php include("includes/Contact-us.php"); ?>
+  <div id="contact-section">
+    <?php include("includes/Contact-us.php"); ?>
+  </div>
   <?php include("includes/Footer.php"); ?>
+  
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    /* Styles for image slider */
+    .image-wrapper {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .project-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+    
+    .project-image.active {
+      opacity: 1;
+      position: relative;
+    }
+  </style>
 
   <!-- JS -->
   <script src="Assests/js/main.js"></script>
@@ -264,6 +316,43 @@ session_start();
           }, 400);
         }, 3000);
       }
+    });
+
+    // Project image slider functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      // Get all project wrappers
+      const projectWrappers = document.querySelectorAll('.project-wrapper');
+      
+      // Function to rotate images for a specific project
+      function rotateProjectImages(wrapper) {
+        const images = wrapper.querySelectorAll('.project-image');
+        if (images.length <= 1) return; // No need to rotate if only one image
+        
+        // Find the currently active image
+        let activeIndex = -1;
+        images.forEach((img, index) => {
+          if (img.classList.contains('active')) {
+            activeIndex = index;
+          }
+        });
+        
+        // Calculate next image index
+        const nextIndex = (activeIndex + 1) % images.length;
+        
+        // Fade out current image, then fade in next image
+        images[activeIndex].classList.remove('active');
+        images[nextIndex].classList.add('active');
+      }
+      
+      // Set up interval for each project
+      projectWrappers.forEach(wrapper => {
+        setInterval(() => {
+          // Only rotate if the project is visible
+          if (wrapper.offsetParent !== null) {
+            rotateProjectImages(wrapper);
+          }
+        }, 5000); // Rotate every 5 seconds
+      });
     });
   </script>
 </body>

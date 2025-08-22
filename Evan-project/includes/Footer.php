@@ -12,13 +12,17 @@
 
     <!-- Navigation Links -->
     <ul class="footer-nav">
-      <li><a href="/">Home</a></li>
+      <li><a href="/Evan-project/index.php" class="active">HOME</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
-      <li><a href="#projects">Projects</a></li>
+      <li><a href="/Evan-project/Project.php">PROJECTS</a></li>
       <li><a href="#testimonials">Testimonials</a></li>
       <li><a href="#contact">Contact Us</a></li>
     </ul>
+
+            
+            <!-- <a href="/Evan-project/Teams.php">OUR TEAM</a> -->
+
 
     <!-- Social Links -->
     <div class="footer-social">

@@ -28,7 +28,10 @@ html, body {
     width: 100%;
     overflow-x: hidden;
     font-family: Arial, sans-serif;
-    transition: all 0.3s ease;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+    padding-top: 90px; /* Add padding to account for fixed header */
 }
 
 body.no-scroll {
@@ -84,10 +87,16 @@ img {
 
 /* Navigation */
 nav {
-    background-color: white;
-    position: relative;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
     padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    width: 100%;
 }
 
 .nav-container {
@@ -263,6 +272,114 @@ margin-bottom: 296px;
     width: 100%;
     overflow: hidden;
 }
+.hero-Teams {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+    background: url('../Assests/images/unsplash_3fPXt37X6UQ.png') no-repeat center/cover;
+    padding: 0 20px;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Overlay */
+.hero-Teams::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.4));
+    z-index: 1;
+}
+
+/* Text */
+.hero-teams-text {
+    position: relative;
+    z-index: 2; /* Overlay ke upar dikhne ke liye */
+    text-align: left; /* ya center, Figma jaisa */
+    max-width: 800px;
+    margin-bottom: 296px;
+}
+
+.hero-teams-text h1 {
+    color: #FFFFFF;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600; 
+    font-size: 38px; /* Figma ke size ke close */
+    line-height: 1.4;
+}
+
+/* Yellow highlight (underline effect) */
+
+.hero-About-us {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+    background: url('../Assests/images/23.png') no-repeat center/cover;
+    padding: 0 20px;
+    width: 100%;
+    overflow: hidden;
+}
+
+/*  */
+ /* About Us Section */
+/* About Us Section Styles */
+.aboutus-section {
+  margin: 40px 0;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+.aboutus-header h2 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #000;
+  display: inline-block;
+  position: relative;
+  margin-bottom: 10px;
+}
+.aboutus-header .highlights {
+  background: linear-gradient(180deg, transparent 60%, #ffe066 60%);
+  font-weight: 600;
+  color: #000;
+  padding: 0 2px;
+}
+.aboutus-header p {
+  color: #000;
+  font-size: 1.1rem;
+  font-family: 'Poppins', sans-serif;
+  max-width: 700px;
+  margin: 0 auto 20px auto;
+  line-height: 1.7;
+}
+.aboutus-mission-box,
+.aboutus-vision-box {
+  border-radius: 8px;
+  padding: 22px 30px;
+  margin: 0 auto 40px auto;
+  max-width: 900px;
+  background: #fff;
+  text-align: center;
+  color: #000;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+@media (max-width: 600px) {
+  .aboutus-mission-box,
+  .aboutus-vision-box {
+    padding: 14px 8px;
+  }
+  .aboutus-header h2 {
+    font-size: 1.3rem;
+  }
+}
+
+
 
 /*  */
 .highlight {
@@ -479,16 +596,17 @@ margin-bottom: 296px;
 
 .project-card img {
     width: 100%;
-    height: 350px;
+    height: 418px;
     object-fit: cover;
     display: block;
+max-height: 164% !important;
 }
 
 .overlay-title {
     position: absolute;
     bottom: 10px;
-    left: 10px;
-    background: #edf0f1;
+    left: -1px;
+    background: #ffffff;
     color: #000000;
     padding: 6px 12px;
     font-size: 16px;
@@ -1067,3 +1185,147 @@ margin-bottom: 296px;
     } */
 }
  
+.team-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.team-section .section-header h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.team-section .section-header p {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  color: #555;
+}
+
+.team-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.team-card {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 10px;
+  border: 2px solid #F6E9BB;   /* border */
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+  padding: 25px;               /* thoda zyada padding */
+  width: 650px;                /* increased size */
+  max-width: 95%;              /* prevent overflow on small screens */
+  text-align: left;
+  gap: 25px;                   /* thoda zyada gap */
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+
+/* animation keyframes */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Add hover animation */
+.team-card:hover {
+  transform: translateY(-8px);
+  transition: all 0.3s ease;
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
+}
+
+.team-card img {
+  width: 140px;
+  height: 140px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.team-info {
+  flex: 1;
+}
+
+.team-info h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.team-info .role {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.team-info .desc {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.team-info .socials a {
+  margin-right: 12px;
+  color: #f7ce3b;
+  font-size: 18px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.team-info .socials a:hover {
+  color: #282828;
+}
+
+/* Two cards in second row */
+.team-row {
+  display: flex;
+  gap: 30px;
+}
+
+/* Responsive for tablets & mobiles */
+@media (max-width: 768px) {
+  .team-card {
+    flex-direction: column;   /* image top, text below */
+    width: 100%;              /* full width */
+    text-align: center;
+  }
+
+  .team-card img {
+    margin-bottom: 15px;
+  }
+
+  .team-row {
+    flex-direction: column;   /* stack cards vertically */
+    gap: 20px;
+    width: 100%;
+  }
+}
+.Ctn-Btn{
+    padding: 10px;
+    background-color: #ffd54f;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+.Ctn-Btn button{
+    color: #000;
+}
+.slideshow img {
+  width: 100%;
+  display: none;
+}
+.slideshow img:first-child {
+  display: block;
+}
+
+
